@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clean Code Calculator</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-color: #f0f0f0;
+      }
+
+      .calculator {
+         background-color: #fff;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input,
+      select,
+      button {
+         margin: 5px 0;
+         padding: 10px;
+         font-size: 16px;
+         width: 100%;
+         box-sizing: border-box;
+      }
+
+      #result {
+         margin-top: 20px;
+         font-weight: bold;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="calculator">
+      <input type="number" id="valOne" placeholder="Enter first number" />
+      <input type="number" id="valTwo" placeholder="Enter second number (if applicable)" />
+      <select id="operation">
+         <option value="+">+</option>
+         <option value="-">-</option>
+         <option value="*">*</option>
+         <option value="/">/</option>
+         <option value="^">^</option>
+         <option value="%">%</option>
+         <option value="circle">Area of Circle</option>
+         <option value="sumLoop">Sum Up To</option>
+      </select>
+      <button onclick="performCalculation()">Calculate</button>
+      <div id="result"></div>
+   </div>
+
+   <script src="dist/bundle.js"></script>
+</body>
+
+</html>
